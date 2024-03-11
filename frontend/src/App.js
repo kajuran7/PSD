@@ -14,6 +14,9 @@ import Dashboard from './Components/Admin/Dashboard';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import AdminRoutes from './Components/AdminRoutes';
 import Payment from './Components/Payment';
+import Cart from './Components/cart';
+import Checkout from './Components/Checkout';
+
 function App() {
    
   
@@ -32,14 +35,18 @@ function App() {
         <Route path="/Signup" element={<Signup   />} />
         <Route path="/Contact" element={<Contact  />} />
         <Route path="/Payment" element ={<Payment/>}/>
+        <Route path="/Cart" element ={<Cart/>}/>
         <Route path="/Filter" element={<Filter />} />
         <Route path="/designs/:id" element={<DesignDetails />} />
         <Route path="/Admin/*" element={<AdminRoutes><Dashboard /></AdminRoutes>} />
+    <Route path="/Checkout" element={<Checkout/>}/>
     
      </Routes>
      <Footer />
 
+
     </div>
+    
   );
 }
 

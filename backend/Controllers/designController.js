@@ -7,6 +7,7 @@ import cloudinary from '../utils/Cloudinary.js';
 
 const createDesign = async (req, res) => {
 
+  
   try {
     const { name, description, price, size, category, sheetsize } = req.body;
 
@@ -33,6 +34,8 @@ const createDesign = async (req, res) => {
     });
 
 
+
+    
 
 
     res.status(201).json(design);
@@ -65,6 +68,10 @@ const createDesign = async (req, res) => {
 //       public_id: result.public_id,
 //       url: result.url,
 //     },
+
+
+
+
 
 //   });
 

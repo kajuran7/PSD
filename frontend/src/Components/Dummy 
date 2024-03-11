@@ -936,3 +936,52 @@
 // }
 
 // export default App;
+
+
+
+
+// Add to cart backend
+// Cart.jsx
+
+// import React from 'react';
+// import { Link } from "react-router-dom";
+
+// function Cart() {
+   
+    
+//     const removeCart = (design) => {
+//         localStorage.removeItem('cartDesigns');
+//     }
+    
+   
+
+
+//   // Retrieve cart designs from local storage
+//   const cartDesigns = JSON.parse(localStorage.getItem('cartDesigns')) || [];
+
+//   return (
+//     <div>
+      
+//       <h2>Your Cart</h2>
+//   Please Check your designs Here
+//       {cartDesigns.map((design) => (
+       
+//         <div key={design.id}>
+      
+//               <li>name<strong>Name:</strong> {design && design.name}</li>
+//                <li><strong>Description:</strong> {design && design.description}</li>
+//                 <li><strong>Price:</strong> Rs{design && design.price}</li>
+//                 <li><strong>Size:</strong> {design && design.size}</li>
+//                 <li><strong>Sheet Size:</strong> {design && design.sheetsize}</li>
+//                 <li><strong>Category:</strong> {design && design.category}</li>
+//                 <button onClick={removeCart}>remove </button>
+            
+  
+//         </div>
+//       ))}
+//           <Link  className="btn btn-outline-dark" type="button" >Checkout</Link>
+//     </div>
+//   );
+// }
+
+// export default Cart;

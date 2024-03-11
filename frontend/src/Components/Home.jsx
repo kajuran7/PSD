@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 const Home = () => {
+  
     return(
     
      
@@ -52,6 +53,9 @@ Welcome to our enchanting world of wedding album design, where creativity blends
                 </div>
             </section>
         </div>
+
+
+
 
 
 

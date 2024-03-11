@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Checkout from './Checkout'
 function Payment() {
   return (
     <div>
