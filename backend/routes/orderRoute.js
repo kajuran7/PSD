@@ -1,16 +1,11 @@
-import express from "express";
+import express from 'express';
 const router = express.Router();
-import {
-  addOrderItems,
-  getOrderById,
-  updateOrderToPaid, 
-  getMyOrders,
-} from "../Controllers/orderController.js";
-import { protect } from "../middleware/authMiddleware.js";
+import orderController from '../Controllers/orderController.js'; // Update import path
 
-router.route("/Order").post(protect, addOrderItems);
-router.route("/myorders").get(protect, getMyOrders);
-router.route("/:id").get(protect, getOrderById);
-router.route("/:id/pay").put(protect, updateOrderToPaid);
+// Define routes
+router.post('/orders', orderController.createOrder);
+router.get('/orders/:id', orderController.getOrderById);
+
+// Add other routes as needed (update, delete, etc.)
 
 export default router;

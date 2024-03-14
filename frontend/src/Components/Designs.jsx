@@ -54,10 +54,10 @@ function Designs() {
           {categories.map((category) => (
             <button 
               key={category}
-              className=  {category === selectedCategory ? "btn " :"btn"} style={{ color:'black', backgroundColor: 'White' }}
+              className=  {category === selectedCategory ? "btn " :"btn"} style={{ marginRight:'20px', color:'black', backgroundColor: 'White' }}
               onClick={() => handleCategoryFilter(category)}
             >
-              
+    
               {category}
               <i class="bi bi--heart"></i>
             </button>
@@ -75,7 +75,7 @@ function Designs() {
               </div>
               <div
                 className="col-lg-6 "
-                style={{ paddingTop: "80px", textAlign: "left", paddingLeft: "100px", width: "500px" }}
+                style={{ paddingTop: "100px", textAlign: "left", paddingLeft: "100px", width: "500px" }}
               >
                 <div className="p-5 mt-4">
                   <h1 className="display">{design.category}</h1>

@@ -6,20 +6,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+   
 
 }
 
 
 #navbar{
-  
+
  position: sticky;
     top: 0;
     left: 0;
     z-index: 100;
     padding: .5rem 5rem;
-    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     background: rgb(14, 13, 61);
- width: 100%;
+    width: 100%;
 }
 
 .design{
@@ -49,7 +50,7 @@
 
 .home{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     gap: 1.5rem;
     min-height: 9vh;
     align-items: center;
@@ -193,7 +194,7 @@
   }
 
   .home{
-    padding: 2rem 9%;
+    padding: 12rem 9%;
   }
 
 
@@ -209,13 +210,14 @@ footer{
   width: 100%;
   bottom: 0;
   left: 0;
+  position: relative;
 }
 footer::before{
   content: '';
-  position: absolute;
+  position: relative;
   left: 0;
   top: 100px;
-  height: 1px;
+  height: 0px;
   width: 100%;
 
 }
@@ -416,6 +418,7 @@ footer .bottom-details .bottom_text{
 
 
 .container .content{
+ 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -560,11 +563,12 @@ footer .bottom-details .bottom_text{
 /* Login */
 
 .container{
+  
   position: relative;
   max-width:100%;
   width:100% ;
-  margin-bottom: 20px;
-  margin-top: 20px ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  margin-bottom: 200px;
+  margin-top: 200px ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
   background: #ffffff;
   padding: 50px 30px;
   box-shadow: 0 5px 10px rgba(5, 0, 15, 0.2);
@@ -626,6 +630,7 @@ footer .bottom-details .bottom_text{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+ 
 }
 .cover .text .text-1,
 .cover .text .text-2{
@@ -637,6 +642,7 @@ footer .bottom-details .bottom_text{
 .cover .text .text-2{
   font-size: 15px;
   font-weight: 500;
+
 }
 .container .forms{
   height: 100%;
@@ -656,7 +662,7 @@ footer .bottom-details .bottom_text{
   position: relative;
   font-size: 24px;
   font-weight: 500;
-  color: #333;
+  color:  hsl(241, 93%, 18%);
 }
 .forms .form-content .title:before{
   content: '';
@@ -669,6 +675,7 @@ footer .bottom-details .bottom_text{
 }
 .forms .signup-form  .title:before{
   width: 20px;
+  color:  hsl(241, 93%, 18%);
 }
 .forms .form-content .input-boxes{
   margin-top: 30px;
@@ -678,8 +685,9 @@ footer .bottom-details .bottom_text{
   align-items: center;
   height: 50px;
   width: 100%;
-  margin: 10px 0;
+  margin: 20px 0px;
   position: relative;
+  text-decoration: none;
 }
 .form-content .input-box input{
   height: 100%;
@@ -696,6 +704,8 @@ footer .bottom-details .bottom_text{
 .form-content .input-box input:valid{
   border-color: hsl(241, 93%, 18%);
 }
+
+/* icon  */
 .form-content .input-box i{
   position: absolute;
   color: hsl(241, 93%, 18%);
@@ -704,7 +714,7 @@ footer .bottom-details .bottom_text{
 .forms .form-content .text{
   font-size: 14px;
   font-weight: 500;
-  color: #333;
+  color: #000000;
 }
 .forms .form-content .text a{
   text-decoration: none;
@@ -725,7 +735,7 @@ footer .bottom-details .bottom_text{
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover{
-  background: hsl(241, 93%, 18%);
+  background:hsla(241, 93%, 18%, 0.951);
 }
 .forms .form-content label{
   color:  hsl(241, 93%, 18%);
@@ -737,7 +747,7 @@ footer .bottom-details .bottom_text{
 .forms .form-content .login-text,
 .forms .form-content .sign-up-text{
   text-align: center;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .container #flip{
   display: none;
@@ -781,7 +791,7 @@ footer .bottom-details .bottom_text{
 
   width: 100%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 150px 20px;
   background-color: rgb(14, 13, 61);
   margin-bottom: 5px;
   margin-top: 5px;
@@ -1216,10 +1226,13 @@ input::-webkit-outer-spin-button {
 .card{
 
   margin: auto;
+  margin-top: 200px;
+  margin-bottom: 400px;
   max-width: 950px;
   width: 90%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
+  padding-top: 0px;
   border: transparent;
 }
 @media(max-width:767px){
@@ -1242,11 +1255,11 @@ input::-webkit-outer-spin-button {
   }
 }
 .summary{
-  background-color: #ddd;
+  background-color:rgb(0, 22, 120);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   padding: 10vh;
-  color: rgb(0, 22, 120);
+  color: rgb(210, 210, 210);
 }
 @media(max-width:767px){
   .summary{
@@ -1256,16 +1269,19 @@ input::-webkit-outer-spin-button {
 }
 .summary .col-2{
   padding: 0;
+ 
 }
 .summary .col-10
 {
   padding: 0;
 }.row{
   margin: 0;
+ 
 }
 .title b{
   font-size: 2rem;
   color:  rgb(0, 22, 120);
+  
 }
 .main{
   margin: 0;
@@ -1283,13 +1299,13 @@ a{
   font-size: 0.9rem;
 }
 img{
-  width: 3.5rem;
+  width: 5rem;
 }
 .back-to-shop{
   margin-top: 4.5rem;
 }
 h5{
-  margin-top: 4vh;
+  margin-top: 5vh;
 }
 hr{
   margin-top: 1.25rem;
@@ -1298,7 +1314,7 @@ form{
   padding: 2vh 0;
 }
 select{
-  border: 1px solid rgba(0, 0, 0, 0.137);
+  border: 1px solid rgba(210, 0, 0, 0.137);
   padding: 1.5vh 1vh;
   margin-bottom: 4vh;
   outline: none;
@@ -1306,7 +1322,7 @@ select{
   background-color: rgb(247, 247, 247);
 }
 input{
-  border: 1px solid rgba(0, 0, 0, 0.137);
+  border: 1px solid rgba(255, 255, 255, 0.137);
   padding: 1vh;
   margin-bottom: 4vh;
   outline: none;
@@ -1338,7 +1354,7 @@ a:hover{
   text-decoration: none;
 }
 #code{
-  background-image: linear-gradient(to left, rgba(9, 68, 164, 0.253) , rgba(171, 25, 25, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.253) , rgba(171, 25, 25, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: center;

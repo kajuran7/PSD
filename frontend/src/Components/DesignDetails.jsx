@@ -71,9 +71,10 @@ function DesignDetails() {
         console.error("Error fetching design data:", error);
       }
     };
+    
 
     fetchDesign();
-  }, [id]);
+  }, [id,addToCart]);
 
   return (
     <>

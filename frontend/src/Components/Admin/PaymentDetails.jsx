@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const DesignList = () => {
+const PayList = () => {
   const [designs, setDesigns] = useState([]);
 
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/design/getdesign');
+        const response = await axios.get('http://localhost:3001/api/get');
         setDesigns(response.data);
       } catch (error) {
         console.error('Error fetching designs:', error);
@@ -18,19 +18,6 @@ const DesignList = () => {
     fetchDesigns();
   }, []);
 
-  const handleEdit = (id) => {
-    // Navigate to edit page or show edit modal
-    console.log('Editing design with ID:', id);
-  };
-
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`/api/design/${id}`);
-      setDesigns(designs.filter((design) => design._id !== id));
-    } catch (error) {
-      console.error('Error deleting design:', error);
-    }
-  };
 
   return (
     <div className="designlist">
@@ -53,7 +40,7 @@ const DesignList = () => {
           {designs.map((design) => (
             <tr key={design._id}>
               <td>{design._id}</td>
-              <td>{design.name}</td>
+              <td>{design.amount}</td>
               <td>{design.sheetsize}</td>
               <td>{design.size}</td>
               <td>{design.description}</td>
@@ -65,10 +52,7 @@ const DesignList = () => {
                   <img src={design.designImage.url} alt="Design" style={{ width: '100px', height: 'auto' }} />
                 )}
               </td>
-              <td>
-                <button className="btn btn-primary btn-sm mr-2" onClick={() => handleEdit(design._id)}>Edit</button>
-                <button className="btn btn-danger btn-sm" onClick={() => handleDelete(design._id)}>Delete</button>
-              </td>
+             
             </tr>
           ))}
         </tbody>
@@ -77,4 +61,4 @@ const DesignList = () => {
   );
 };
 
-export default DesignList;
+export default PayList;

@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 
 
-const Navbar =({ cartCount }) => {
+const Navbar =() => {
   
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"))
   const role = user ? user.role : ""
  
+  const [cartCount, setCartCount] = useState(0);
+  useEffect(() => {
+    // Fetch the initial cart count from local storage
+    const initialCartCount = JSON.parse(localStorage.getItem("cartDesigns"))?.length || 0;
+    setCartCount(initialCartCount);
+  }, []);
 
+  
 
 
   const handleLogout = () => {
@@ -26,6 +33,7 @@ const Navbar =({ cartCount }) => {
             toast.success("logout success")
           }, 3000);
           localStorage.removeItem('user');
+          localStorage.removeItem('cartDesigns')
           window.location.reload();
           window.location.href = '/Home';
         } else {
@@ -39,7 +47,7 @@ const Navbar =({ cartCount }) => {
 
 
     // Redirect to the Signup page
-    navigate('/Signup');
+    navigate('/Register');
     // Function to update the cart count
 
 
@@ -50,7 +58,7 @@ const Navbar =({ cartCount }) => {
 
     <div>
 
-      <nav className="navbar navbar-expand-lg navbar-dark" id="navbar">
+      <nav  className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{position:'fixed'}}>
 
         <div className="container-fluid">
           <Link className="navbar-brand" to="/Home">
@@ -136,7 +144,7 @@ const Navbar =({ cartCount }) => {
               </button>
             ) : (
               <a
-                href="Signup"
+                href="Register"
                 className="btn p-2 my-lg-0 my-2"
                 style={{
                   marginLeft: "50px",

@@ -1,58 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import Payment from '../Components/Payment';
+import StripeCheckout from 'react-stripe-checkout';
+import { useNavigate} from 'react-router-dom';
 import Navbar from "./Navbar";
 
 function Checkout() {
+  const navigate = useNavigate(); // Add this line to get the history object
+
   const [cartDesigns, setCartDesigns] = useState([]);
-
-
-
-  const handlePayment = async (token, totalPrice) => {
-    try {
-      const response = await fetch('http://localhost:3000/api/payments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          token,
-          amount: totalPrice * 100, // Convert amount to cents
-        }),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        // Payment successful, you can redirect or perform other actions
-        console.log('Payment successful:', result.paymentIntent);
-        // Handle success, e.g., update order status, redirect to success page
-      } else {
-        // Payment failed, handle the error
-        console.error('Payment failed:', result.error);
-        // Handle failure, e.g., show error message to the user
-      }
-    } catch (error) {
-      console.error('Error processing payment:', error);
-      // Handle unexpected errors
-    }
-  };
 
   useEffect(() => {
     // Retrieve cart designs from local storage
     const storedCartDesigns = JSON.parse(localStorage.getItem('cartDesigns')) || [];
     setCartDesigns(storedCartDesigns);
   }, []);
-
+  
   const removeCart = (designId) => {
-    const updatedCartDesigns = cartDesigns.filter(design => design.id !== designId);
+    const updatedCartDesigns = cartDesigns.filter((design) => design.id !== designId);
     setCartDesigns(updatedCartDesigns);
     localStorage.setItem('cartDesigns', JSON.stringify(updatedCartDesigns));
-  }
   
+  };
 
   const calculateTotalPrice = () => {
     return cartDesigns.reduce((total, design) => total + design.price, 0);
-  }
+  };
+
+
+
+  const handleToken = (token) => {
+    const backendUrl = 'http://localhost:3001/api/payment';
+    const user = JSON.parse(localStorage.getItem("user"))
+    const Designs = JSON.parse(localStorage.getItem('cartDesigns')) || [];
+    fetch(backendUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        Designs,
+        user,
+        token,
+        amount: calculateTotalPrice() * 100,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Payment response:', data);
+        navigate('/Success');
+        // Handle success, e.g., update order status, redirect to success page
+      })
+      .catch((error) => {
+        console.error('Payment failed:', error);
+        navigate('/Checkout'); 
+        // Handle failure, e.g., show error message to the user
+      });
+  };
+
+
+
+
 
   return (
     <div>
@@ -101,7 +107,19 @@ function Checkout() {
               <div className="col text-right">{calculateTotalPrice()} LKR</div>
             </div>
           
-            <div className="btn btn-primary btn-sm mr-2" totalPrice={calculateTotalPrice()} handlePayment={(token, amount) => handlePayment(token, amount)} style={{ backgroundColor: 'blue' }}>CHECKOUT</div>
+            {/* <div className="btn btn-primary btn-sm mr-2" totalPrice={calculateTotalPrice()} handlePayment={(token, amount) => handlePayment(token, amount)} style={{ backgroundColor: 'blue' }}>CHECKOUT</div> */}
+            <StripeCheckout
+              stripeKey="pk_test_51OpTDBSAE4qVD58Fve7SfCcTLU4NdPvExC1mtlGlPBB3zgRhHaDmevpJrBuk1UZd78Ocll7Y8ZcXVFhOWWNLgp6H00w56j0Z27"
+              token={handleToken}
+              amount={calculateTotalPrice() * 100} // Amount in cents
+              name="PSDynamic"
+              description="Payment for Designs"
+              currency="LKR"
+            >
+              <button className="btn btn-primary btn-sm" style={{ backgroundColor:'Blue'}}>
+                CHECKOUT
+              </button>
+            </StripeCheckout>
           </div>
         </div>
        

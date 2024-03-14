@@ -45,8 +45,9 @@ const AdminNavbar = () => {
         </li>
         <li><Link to="/Admin/userList">Users</Link></li>
         <li><Link to="/Admin/DesignsList">Designs</Link></li>
-        <li><Link to="/Admin/Orders">Orders</Link></li>
+        <li><Link to="/Admin/Orders">Payment Details</Link></li>
         <li><Link to="/Admin/DesignForm"> Create Designs</Link></li>
+     
       </ul>
       {/* Conditional rendering of Signup/Logout button */}
       {user ? (

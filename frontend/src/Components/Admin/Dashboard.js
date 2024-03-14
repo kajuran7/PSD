@@ -4,7 +4,7 @@ import AdminNavbar from './AdminNavbar';
 import UserList from './UserList';
 import DesignsList from './DesignsList';
 import DesignForm from './DesignForm';
-
+import PayList from './PaymentDetails';
 function Dashboard() {
   return ( 
       <div>
@@ -14,6 +14,7 @@ function Dashboard() {
         <Route path="/userlist" element={<UserList />} />
         <Route path="/Designslist" element={<DesignsList />} />
         <Route path="/DesignForm" element={<DesignForm />} />
+        <Route path="/Orders" element={<PayList />} />
 
         </Routes>
       </div>

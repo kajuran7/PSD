@@ -39,7 +39,9 @@ designImage: {
     url: {
       type: String,
       required:true
-    }
+    },
+
+ 
   },
 
 

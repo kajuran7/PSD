@@ -1,6 +1,8 @@
+
 import React from 'react';
+import { Link } from "react-router-dom";
 import Navbar from './Navbar';
-const Filter = () => {
+const download = () => {
  
   return (
     
@@ -8,12 +10,14 @@ const Filter = () => {
 <Navbar/>
 
 <div className="container" >
-      <h2>Checkout Successful</h2>
+      <h2>Payment Successful</h2>
       <p>Your order might take some time to process.</p>
-      <p>Check your order status at your profile after about 10mins.</p>
+      <p>Check your order status After 10mins.</p>
       <p>
         Incase of any inqueries 
         <strong>contact Us</strong>
+        <br/>
+        <Link  className="btn btn-outline-dark" type="button"  to="/Download" >Ok</Link>
       </p>
 </div>
 
@@ -22,4 +26,4 @@ const Filter = () => {
 </div>
   );
 };
-export default Filter;
+export default download;

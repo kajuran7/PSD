@@ -23,7 +23,7 @@ const Footer = () => {
           <li><a href="http://localhost:3000/Home">Home</a></li>
           <li><a href="http://localhost:3000/Contact">Contact us</a></li>
           <li><a href="http://localhost:3000/About">About us</a></li>
-          <li><a href="http://localhost:3000/Signup">Get started</a></li>
+          <li><a href="http://localhost:3000/Register">Get started</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Services</li>
@@ -53,15 +53,15 @@ const Footer = () => {
         </ul> */}
       </div>
     </div>
-    <div className="bottom-details">
+    {/* <div className="bottom-details">
       <div className="bottom_text">
-        <span className="copyright_text">Copyright © 2024 <a href="http://localhost:3000/Home">4MYCHUMP</a>All rights reserved</span>
+        <span className="copyright_text">Copyright © 2024 <a href="http://localhost:3000/Home">PSDynamic</a>All rights reserved</span>
         <span className="policy_terms">
           <a href="http://localhost:3000/Home">Privacy policy</a>
           <a href="http://localhost:3000/Home">Terms & condition</a>
         </span>
       </div>
-    </div>
+    </div> */}
   </footer>
 </div>
 

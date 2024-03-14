@@ -19,13 +19,13 @@ const database = mongoose.connection
 
 import userRoutes from "./routes/userRoutes.js";
 import designRoute from "./routes/designRoute.js";
-import orderRoute from "./routes/orderRoute.js";
-import router from './routes/userRoutes.js';
-import PaymentRoute from './routes/PaymentRoute.js'; // Import the new routes
+import orderRoute from './routes/orderRoute.js';
+import PaymentRoute from './routes/PaymentRoute.js';
 
 app.use(express.json());
 app.use(express.urlencoded( {extended: true }))
 app.use(cookieParser())
+
 
 app.use(
     cors({
@@ -41,9 +41,8 @@ app.use(
   
 app.use("/api/users",userRoutes);
 app.use("/api/design", designRoute); 
-router.use("/api/order",orderRoute);
-app.use('/api/payment', PaymentRoute); // Use the new payment routes
-
+app.use('/api/order', orderRoute);
+app.use('/api', PaymentRoute);
 
 app.get("/",(req,res) => res.send("server is ready"));
 

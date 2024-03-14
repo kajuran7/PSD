@@ -9,6 +9,9 @@ const DesignForm = () => {
   const [sheetsize, setSheetSize] = useState(''); 
   const [description, setDescription] = useState('');
   const [designImage, setDesignImage] = useState(null);
+ 
+
+
 
   const handleNameChange = (e) => setName(e.target.value);
   const handleCategoryChange = (e) => setCategory(e.target.value);
@@ -21,13 +24,14 @@ const DesignForm = () => {
   const handleUpload = async () => {
     const formData = new FormData();
     formData.append('name', name);
-    formData.append('category', setCustomCategory || customCategory); // Use custom category if selected, otherwise use dropdown
+    formData.append('category', category || customCategory); // Use selected category if available, otherwise use custom category
+    // formData.append('category', setCustomCategory || customCategory); // Use custom category if selected, otherwise use dropdown
     formData.append('price', price);
     formData.append('size', size);
     formData.append('sheetsize', sheetsize);
     formData.append('description', description);
     formData.append('designImage', designImage);
-
+  
     try {
       const response = await fetch('http://localhost:3001/api/design/createdesign', {
         method: 'POST',
@@ -43,6 +47,7 @@ const DesignForm = () => {
       console.error('Error uploading:', error);
     }
   };
+  
 
   return (
     <div className="ventor-form">
@@ -63,14 +68,16 @@ const DesignForm = () => {
       <label htmlFor="category">Category:</label>
       <select type="text" id="category" value={category} onChange={handleCategoryChange}>
         <option value="">Select Category</option>
-        <option value="wedding">Wedding</option>
-        <option value="birthday">Birthday</option>
-        <option value="ceremony">Ceremony</option>
-        <option value="frames">Frames</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Ceremony">Ceremony</option>
+        <option value="Frames">Frames</option>
       </select>
 
       <label htmlFor="designImage">Image:</label>
       <input type="file" id="designImage"  onChange={handleDesignImageChange} accept="image/*" required />
+
+
 
       <button type="button" onClick={handleUpload}>
         Upload

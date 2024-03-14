@@ -131,7 +131,7 @@ const Signup = () => {
   } catch (error) {
     console.error(error);
     toast.error('Login Failed!');
-    navigate('/Signup');
+    navigate('/Register');
   }
 };
 

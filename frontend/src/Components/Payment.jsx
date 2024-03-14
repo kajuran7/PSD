@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkout from './Checkout'
+
 function Payment() {
   return (
     <div>
@@ -10,87 +10,19 @@ function Payment() {
 
       <div className="row"> 
 
-          <div className="col"> 
-              <h3 className="title"> 
-                  Billing Address 
-              </h3> 
-
-              <div className="inputBox"> 
-                  <label for="name"> 
-                        Full Name: 
-                    </label> 
-                  <input type="text" id="name" 
-                         placeholder="Enter your full name" 
-                         required/> 
-              </div> 
-
-              <div className="inputBox"> 
-                  <label for="email"> 
-                        Email: 
-                    </label> 
-                  <input type="text" id="email" 
-                         placeholder="Enter email address" 
-                         required/> 
-              </div> 
-
-              <div className="inputBox"> 
-                  <label for="address"> 
-                        Address: 
-                    </label> 
-                  <input type="text" id="address" 
-                         placeholder="Enter address" 
-                         required/> 
-              </div> 
-
-              <div className="inputBox"> 
-                  <label for="city"> 
-                        City: 
-                    </label> 
-                  <input type="text" id="city" 
-                         placeholder="Enter city" 
-                         required/> 
-              </div> 
-
-              <div className="flex"> 
-
-                  {/* <div className="inputBox"> 
-                      <label for="state"> 
-                            State: 
-                        </label> 
-                      <input type="text" id="state" 
-                             placeholder="Enter state" 
-                             required/> 
-                  </div>  */}
-
-                  <div className="inputBox"> 
-                      <label for="zip"> 
-                            Zip Code: 
-                        </label> 
-                      <input type="number" id="zip" 
-                             placeholder="123 456" 
-                             required/> 
-                  </div> 
-
-              </div> 
-
-          </div> 
+        
           <div className="col"> 
               <h3 className="title">Payment</h3> 
 
               <div className="inputBox"> 
-                  <label for="name"> 
-                        Card Accepted: 
-                    </label> 
-                  <img src={require("../Components/assets/15.jpg")}
- alt="credit/debit card image"/> 
+                 
+           
               </div> 
 
               <div className="inputBox"> 
-                  <label for="cardName"> 
-                        Name On Card: 
-                    </label> 
+               
                   <input type="text" id="cardName" 
-                         placeholder="Enter card name" 
+                         placeholder="Enter Your name" 
                          required/> 
               </div> 
 
@@ -159,4 +91,7 @@ function Payment() {
   )
 }
 
-export default Payment
+export default Payment;
+
+
+
