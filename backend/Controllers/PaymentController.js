@@ -5,6 +5,7 @@ const processPayment = async (req, res) => {
     const { token, amount,user ,Designs} = req.body;
     // Perform any necessary validation on token and amount
 
+    
     // Save payment details to your database
     const payment = new Payment({
       paymentStatus:"paid",
