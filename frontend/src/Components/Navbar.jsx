@@ -14,7 +14,7 @@ const Navbar =() => {
     // Fetch the initial cart count from local storage
     const initialCartCount = JSON.parse(localStorage.getItem("cartDesigns"))?.length || 0;
     setCartCount(initialCartCount);
-  }, []);
+  }, [cartCount]);
 
   
 
@@ -60,11 +60,12 @@ const Navbar =() => {
 
       <nav  className="navbar navbar-expand-lg navbar-dark" id="navbar" style={{position:'fixed'}}>
 
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/Home">
-            PSDynamic
+        <div className="container-fluid" >
+        < img  src={require("../Components/assets/PSDl.png")}/> 
+          <Link className="navbar-brand" to="/Home" >PSDynamic
           </Link>
-        
+           
+            {/* style={{ width:'200px' ,height:'200px'   }}  */}
 
           <button
             className="navbar-toggler"

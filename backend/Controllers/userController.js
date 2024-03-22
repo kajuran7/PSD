@@ -148,18 +148,8 @@ const getUserById = asyncHandler(async (req, res) => {
       throw new Error('User not found');
     }
   });
-//   @desc Delete User by ID
-// route DELETE /api/users/:id
-// @access Private 
 
 
-
-
-
-
-
-
-        
     export {authUser,
         registerUser,
         getUserProfile,

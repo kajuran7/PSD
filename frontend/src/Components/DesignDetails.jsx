@@ -46,6 +46,7 @@ function DesignDetails() {
         draggable: true,
         progress: undefined,
       });
+   
 
       navigate('/Checkout'); // Change this to the actual path of your cart page
     } else {

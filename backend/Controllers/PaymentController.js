@@ -5,14 +5,14 @@ const processPayment = async (req, res) => {
     const { token, amount,user ,Designs} = req.body;
     // Perform any necessary validation on token and amount
 
-    
+  var price = amount /100
     // Save payment details to your database
     const payment = new Payment({
       paymentStatus:"paid",
       user:user._id,
       designs:Designs,
-      amount,
-      currency: 'LKR',
+      amount:price,
+      currency: 'LKR', 
       description: 'Payment for Designs',
       source: token.id, // Assuming you store the source ID as a string
     });
@@ -28,7 +28,7 @@ const processPayment = async (req, res) => {
 };
 
 
-const getpay = asynchandler(async (req, res) => {
+const getPaymentDetails = asynchandler(async (req, res) => {
   try {
     const data = await Payment.find();
     res.status(200).json(data);
@@ -41,4 +41,4 @@ const getpay = asynchandler(async (req, res) => {
 
 
 
-export { processPayment ,getpay};
+export { processPayment ,getPaymentDetails};

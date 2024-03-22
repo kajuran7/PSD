@@ -25,7 +25,7 @@ const DesignList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/design/${id}`);
+      await fetch.delete(`/api/design/${id}`);
       setDesigns(designs.filter((design) => design._id !== id));
     } catch (error) {
       console.error('Error deleting design:', error);

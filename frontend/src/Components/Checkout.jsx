@@ -28,6 +28,7 @@ function Checkout() {
 
 
   const handleToken = (token) => {
+    
     const backendUrl = 'http://localhost:3001/api/payment';
     const user = JSON.parse(localStorage.getItem("user"))
     const Designs = JSON.parse(localStorage.getItem('cartDesigns')) || [];
@@ -46,6 +47,7 @@ function Checkout() {
       .then((response) => response.json())
       .then((data) => {
         console.log('Payment response:', data);
+
         navigate('/Success');
         // Handle success, e.g., update order status, redirect to success page
       })
@@ -116,9 +118,12 @@ function Checkout() {
               description="Payment for Designs"
               currency="LKR"
             >
+
+
               <button className="btn btn-primary btn-sm" style={{ backgroundColor:'Blue'}}>
                 CHECKOUT
               </button>
+
             </StripeCheckout>
           </div>
         </div>
