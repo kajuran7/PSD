@@ -33,7 +33,7 @@ const DesignForm = () => {
     formData.append('designImage', designImage);
   
     try {
-      const response = await fetch('http://localhost:3001/api/design/createdesign', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/design/createdesign`, {
         method: 'POST',
         body: formData,
       });

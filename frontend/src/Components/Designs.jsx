@@ -8,7 +8,7 @@ function Designs() {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/design/getdesign")
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/design/getdesign`)
       .then((response) => response.json())
       .then((data) => {
         if (Array.isArray(data)) {

@@ -6,7 +6,7 @@
 //   const [searchQuery, setSearchQuery] = useState("");
 
 //   useEffect(() => { 
-//     fetch("http://localhost:3001/api/design/getdesign")
+//     fetch(`${process.env.REACT_APP_BACKEND_URL}/api/design/getdesign`)
     
 //       .then((response) => response.json())
 //       .then((data) => {

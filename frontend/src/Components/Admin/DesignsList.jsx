@@ -8,7 +8,7 @@ const DesignList = () => {
   useEffect(() => {
     const fetchDesigns = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/design/getdesign');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/design/getdesign`);
         setDesigns(response.data);
       } catch (error) {
         console.error('Error fetching designs:', error);

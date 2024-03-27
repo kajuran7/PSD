@@ -16,6 +16,7 @@ import AdminRoutes from './Components/AdminRoutes';
 import Payment from './Components/Payment';
 import Success from './Components/success';
 import Checkout from './Components/Checkout';
+import Navbar from './Components/Navbar';
 
 function App() {
    
@@ -26,11 +27,12 @@ function App() {
 
 
     <div>
+      
 
   <ToastContainer theme="dark"/>
   
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         < Route path="/About" element={<About />}  />        
         <Route path="/Designs" element={<Design />}  />
         <Route path="/Register" element={<Signup   />} />
@@ -40,13 +42,11 @@ function App() {
         <Route path="/Download" element={<Download />} />
         <Route path="/designs/:id" element={<DesignDetails />} />
         <Route path="/Admin/*" element={<AdminRoutes><Dashboard /></AdminRoutes>} />
-    <Route path="/Checkout" element={<Checkout/>}/>
-    
-  
- 
+        <Route path="/Checkout" element={<Checkout/>}/>
+       
      </Routes>
- 
-     <Footer />
+     <Footer/>
+    
  
 
     </div>

@@ -20,24 +20,24 @@ const Footer = () => {
       <div className="link-boxes">
         <ul className="box">
           <li className="link_name">Company</li>
-          <li><a href="http://localhost:3000/Home">Home</a></li>
+          <li><a href="http://localhost:3000">Home</a></li>
           <li><a href="http://localhost:3000/Contact">Contact us</a></li>
           <li><a href="http://localhost:3000/About">About us</a></li>
           <li><a href="http://localhost:3000/Register">Get started</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Services</li>
-          <li><a href="http://localhost:3000/Home">App design</a></li>
-          <li><a href="http://localhost:3000/Home">Web design</a></li>
-          <li><a href="http://localhost:3000/Home">Logo design</a></li>
-          <li><a href="http://localhost:3000/Home">Banner design</a></li>
+          <li><a href="http://localhost:3000">App design</a></li>
+          <li><a href="http://localhost:3000">Web design</a></li>
+          <li><a href="http://localhost:3000">Logo design</a></li>
+          <li><a href="http://localhost:3000">Banner design</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Account</li>
-          <li><a href="http://localhost:3000/Home">Profile</a></li>
-          <li><a href="http://localhost:3000/Home">My account</a></li>
-          <li><a href="http://localhost:3000/Home">Prefrences</a></li>
-          <li><a href="http://localhost:3000/Home">Purchase</a></li>
+          <li><a href="http://localhost:3000">My account</a></li>
+          <li><a href="http://localhost:3000">Prefrences</a></li>
+          <li><a href="http://localhost:3000">Purchase</a></li>
+          <li><a href="http://localhost:3000">Profile</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Courses</li>

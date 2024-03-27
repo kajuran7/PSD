@@ -7,7 +7,7 @@ const UserList = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/users/getallusers');
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/getallusers`);
         if (!response.ok) {
           throw new Error('Failed to fetch users');
         }
@@ -27,7 +27,7 @@ const UserList = () => {
  
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/users/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/${id}`, {
         method: 'DELETE'
       });
       if (!response.ok) {

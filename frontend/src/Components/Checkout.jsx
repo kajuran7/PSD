@@ -29,7 +29,7 @@ function Checkout() {
 
   const handleToken = (token) => {
     
-    const backendUrl = 'http://localhost:3001/api/payment';
+    const backendUrl = `${process.env.REACT_APP_BACKEND_URL}/api/payment`;
     const user = JSON.parse(localStorage.getItem("user"))
     const Designs = JSON.parse(localStorage.getItem('cartDesigns')) || [];
     fetch(backendUrl, {

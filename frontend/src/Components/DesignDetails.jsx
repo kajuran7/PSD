@@ -66,7 +66,7 @@ function DesignDetails() {
   useEffect(() => {
     const fetchDesign = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/api/design/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/design/${id}`);
         setDesign(response.data);
       } catch (error) {
         console.error("Error fetching design data:", error);

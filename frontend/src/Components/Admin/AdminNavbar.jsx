@@ -10,7 +10,7 @@ const AdminNavbar = () => {
     // Perform logout actions (remove token, etc.)
 
     // Send a POST request to the server-side logout endpoint
-    fetch('http://localhost:3001/api/users/logout', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/logout`, {
       method: 'POST',
       credentials: 'include'
     })

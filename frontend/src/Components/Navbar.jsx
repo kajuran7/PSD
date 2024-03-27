@@ -23,7 +23,7 @@ const Navbar =() => {
     // Perform logout actions (remove token, etc.)
 
     // Send a POST request to the server-side logout endpoint
-    fetch('http://localhost:3001/api/users/logout', {
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/users/logout`, {
       method: 'POST',
       credentials: 'include'
     })
@@ -62,7 +62,7 @@ const Navbar =() => {
 
         <div className="container-fluid" >
         < img  src={require("../Components/assets/PSDl.png")}/> 
-          <Link className="navbar-brand" to="/Home" >PSDynamic
+          <Link className="navbar-brand" to="/" >PSDynamic
           </Link>
            
             {/* style={{ width:'200px' ,height:'200px'   }}  */}
@@ -81,7 +81,7 @@ const Navbar =() => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto design">
               <li className="nav-item">
-                <Link className="nav-link" to="/Home">
+                <Link className="nav-link" to="/">
                   Home
                 </Link>
               </li>
