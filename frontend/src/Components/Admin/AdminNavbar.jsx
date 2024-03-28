@@ -21,7 +21,7 @@ const AdminNavbar = () => {
           }, 5000);
           localStorage.removeItem('user');
           window.location.reload();
-          window.location.href = '/Home';
+          window.location.href = '/';
         } else {
           throw new Error('Logout failed.');
         }
@@ -39,7 +39,7 @@ const AdminNavbar = () => {
       <Link to="/Admin" className="logo">Admin</Link>
       <ul className='mx-auto' >
         <li >
-          <Link to="/Home">
+          <Link to="/">
             Home
           </Link>
         </li>

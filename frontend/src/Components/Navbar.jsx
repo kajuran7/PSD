@@ -35,7 +35,7 @@ const Navbar =() => {
           localStorage.removeItem('user');
           localStorage.removeItem('cartDesigns')
           window.location.reload();
-          window.location.href = '/Home';
+          window.location.href = '/';
         } else {
           throw new Error('Logout failed.');
         }

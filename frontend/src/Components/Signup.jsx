@@ -124,7 +124,7 @@ const Signup = () => {
     localStorage.setItem('user', JSON.stringify(data));
     // Redirect based on user role
    
-      navigate('/Home');
+      navigate('/');
   
    
     return data;

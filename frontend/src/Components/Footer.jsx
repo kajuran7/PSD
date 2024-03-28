@@ -20,31 +20,31 @@ const Footer = () => {
       <div className="link-boxes">
         <ul className="box">
           <li className="link_name">Company</li>
-          <li><a href="http://localhost:3000">Home</a></li>
-          <li><a href="http://localhost:3000/Contact">Contact us</a></li>
-          <li><a href="http://localhost:3000/About">About us</a></li>
-          <li><a href="http://localhost:3000/Register">Get started</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Home</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/Contact`}>Contact us</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/About`}>About us</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/Register`}>Get started</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Services</li>
-          <li><a href="http://localhost:3000">App design</a></li>
-          <li><a href="http://localhost:3000">Web design</a></li>
-          <li><a href="http://localhost:3000">Logo design</a></li>
-          <li><a href="http://localhost:3000">Banner design</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>App design</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Web design</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Logo design</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Banner design</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Account</li>
-          <li><a href="http://localhost:3000">My account</a></li>
-          <li><a href="http://localhost:3000">Prefrences</a></li>
-          <li><a href="http://localhost:3000">Purchase</a></li>
-          <li><a href="http://localhost:3000">Profile</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>My account</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Prefrences</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Purchase</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>P/*rofile</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Courses</li>
-          <li><a href="http://localhost:3000/Home">HTML & CSS</a></li>
-          <li><a href="http://localhost:3000/Home">JavaScript</a></li>
-          <li><a href="http://localhost:3000/Home">Photography</a></li>
-          <li><a href="http://localhost:3000/Home">Photoshop</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>HTML & CSS</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>JavaScript</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Photography</a></li>
+          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Photoshop</a></li>
         </ul>
         {/* <ul className="box input-box">
           <li className="link_name">Subscribe</li>
