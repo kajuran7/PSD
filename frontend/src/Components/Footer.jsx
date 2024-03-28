@@ -20,31 +20,31 @@ const Footer = () => {
       <div className="link-boxes">
         <ul className="box">
           <li className="link_name">Company</li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Home</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/Contact`}>Contact us</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/About`}>About us</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}/Register`}>Get started</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Home</a></li>
+          <li><a href={`https://psd-1.onrender.com/Contact`}>Contact us</a></li>
+          <li><a href={`https://psd-1.onrender.com/About`}>About us</a></li>
+          <li><a href={`https://psd-1.onrender.com/Register`}>Get started</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Services</li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>App design</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Web design</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Logo design</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Banner design</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>App design</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Web design</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Logo design</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Banner design</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Account</li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>My account</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Prefrences</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Purchase</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>P/*rofile</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>My account</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Prefrences</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Purchase</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>P/*rofile</a></li>
         </ul>
         <ul className="box">
           <li className="link_name">Courses</li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>HTML & CSS</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>JavaScript</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Photography</a></li>
-          <li><a href={`${process.env.REACT_APP_BACKEND_URL}`}>Photoshop</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>HTML & CSS</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>JavaScript</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Photography</a></li>
+          <li><a href={`https://psd-1.onrender.com`}>Photoshop</a></li>
         </ul>
         {/* <ul className="box input-box">
           <li className="link_name">Subscribe</li>
