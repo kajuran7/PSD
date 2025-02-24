@@ -45,6 +45,21 @@
 //           />
 //         </div>
 
+// ENV For Frontend REACT_APP_BACKEND_URL=http://localhost:3001
+
+
+//  & BAckend 
+// PORT=3001
+// DATABASE_URL=mongodb+srv://kajuran:PSDynamicM@cluster0.d9tmnrk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+// JWT_SECRET=abc123
+// NODE_ENV=development
+// CLOUDINARY_CLOUD_NAME=do9rzegmg
+// CLOUDINARY_API_KEY=357239444979671
+// CLOUDINARY_API_SECRET=F9h30WCRYqgb6yiuQKceMXJcVBE
+// STRIPE_SECRET_KEY=sk_test_51OpTDBSAE4qVD58F64ifvxUhtwE9jn63kRMcuPO00iNIyO0XPJSeCwIar0wvETrZi8r2iijO579BD6VPXtzGXJKX00FbXgCZ3y
+// STRIPE_API_KEY=pk_test_51OpTDBSAE4qVD58Fve7SfCcTLU4NdPvExC1mtlGlPBB3zgRhHaDmevpJrBuk1UZd78Ocll7Y8ZcXVFhOWWNLgp6H00w56j0Z27
+// FRONTEND_URL=http://localhost:3000
+
 
 
         
